@@ -1,0 +1,51 @@
+{
+  "hosting": {
+    "public": "public",
+    "target": "platafroma_joti_frontend",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/images/.@(webp|svg|jpg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3628800000"
+          }
+        ]
+      },
+      {
+        "source": "/images/.@(jpeg|gif|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600000"
+          }
+        ]
+      },
+      {
+        "source": "/*.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=3600000"
+          }
+        ]
+      },
+      {
+        "source": "/.@(eot|otf|ttf|ttc|woff|font.css)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": ""
+          }
+        ]
+      }
+    ]
+  }
+}

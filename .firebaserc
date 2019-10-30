@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "plataforma-joti"
+  },
+  "targets": {
+    "plataforma-joti": {
+      "hosting": {
+        "platafroma_joti_frontend": [
+          "plataforma-joti-frontend"
+        ]
+      }
+    }
+  }
+}
